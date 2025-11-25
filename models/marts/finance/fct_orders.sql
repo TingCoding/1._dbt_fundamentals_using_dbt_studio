@@ -16,7 +16,7 @@ order_payments as (
         order_id,
         sum(
             case 
-                when status = 'success' then amount end
+                when payment_status = 'success' then amount end
             ) as amount
     
     from payments
