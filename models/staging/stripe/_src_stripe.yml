@@ -4,8 +4,17 @@ sources:
   - name: stripe
     database: raw
     schema: stripe
+    description: Stripe table for raw data 
     tables:
       - name: payment
+        description: Raw payment data
+        columns:
+          - name: id
+            description: Primary key for payment data
+            data_tests:
+              - unique
+              - not_null
+
         config:
           freshness:
             warn_after:
