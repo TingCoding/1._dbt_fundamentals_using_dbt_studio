@@ -27,6 +27,7 @@ models:
                 - placed
                 - return_pending
       - name: customer_id
+        description: Referencing integrity customer_id for orders table to customers table  
         data_tests:
           - relationships:
               field: customer_id
